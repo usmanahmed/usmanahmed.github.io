@@ -7,104 +7,120 @@
   <meta name="description" content="Usman Ahmed is a full-stack web developer in Karachi, Pakistan, building with PHP, Laravel, WordPress, Shopify, React and Next.js.">
   <meta property="og:title" content="Usman Ahmed — Web Developer">
   <meta property="og:description" content="Full-stack web developer in Karachi, Pakistan. PHP, Laravel, WordPress, Shopify, React, Next.js.">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/9985034?v=4">
+  <meta property="og:image" content="https://usmanahmed.github.io/img/deen.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/9985034?s=64&v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a href="#top" class="logo">Usman Ahmed</a>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <button id="theme" class="theme-btn" aria-label="Toggle dark mode">◐</button>
-      </nav>
+  <header class="nav wrap">
+    <a href="#top" class="logo">Usman Ahmed</a>
+    <div class="nav-actions">
+      <button id="theme" class="icon-btn" aria-label="Toggle dark mode">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="pill dark" href="#contact">Get in touch</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero wrap">
-      <img class="avatar" src="https://avatars.githubusercontent.com/u/9985034?s=320&v=4" alt="Usman Ahmed" width="128" height="128">
-      <p class="eyebrow mono">// Karachi, Pakistan</p>
-      <h1>Hi, I'm Usman Ahmed.<br><span class="muted">I build websites, stores and web apps.</span></h1>
-      <p class="lead">Full-stack web developer working with PHP, Laravel, WordPress, Shopify, React and Next.js.</p>
-      <div class="cta">
-        <a class="btn primary" href="#projects">See my projects</a>
-        <a class="btn" href="mailto:usmandvlpr@gmail.com">Get in touch</a>
+    <section class="hero wrap grid-bg">
+      <div class="hero-top">
+        <img class="avatar" src="img/avatar.jpg" alt="Usman Ahmed" width="160" height="125">
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+            <text><textPath href="#circle" textLength="286" lengthAdjust="spacing">LARAVEL • WORDPRESS • SHOPIFY • NEXT.JS •</textPath></text>
+          </svg>
+          <span>✳</span>
+        </div>
+      </div>
+      <h1>Building fast, practical websites,<br>stores and web apps from Karachi.</h1>
+      <div class="hero-bottom">
+        <div>
+          <p class="small">Have a project in mind?<br>Let's talk about it.</p>
+          <div class="cta">
+            <a class="pill dark" href="mailto:usmandvlpr@gmail.com">Email me</a>
+            <a class="pill" href="https://wa.me/923332353106">WhatsApp</a>
+          </div>
+        </div>
+        <p class="intro">I'm a full-stack web developer working with PHP, Laravel, WordPress, Shopify, React and Next.js. I take projects from first idea to a live production site.</p>
       </div>
     </section>
 
-    <section id="projects" class="wrap section">
-      <h2>Projects</h2>
-      <div class="projects">
-        <article class="card project">
-          <h3><a href="https://deen.pk">deen.pk</a></h3>
-          <p>An Islamic companion site with namaz timings, Quran Kareem, Sehri and Iftar timings, and Qibla direction for Muslims worldwide.</p>
-          <ul class="tags small"><li>Next.js</li><li>React</li><li>TypeScript</li></ul>
-          <a class="mono link" href="https://deen.pk">Visit site →</a>
-        </article>
-        <article class="card project">
-          <h3><a href="https://teky.pk">teky.pk</a></h3>
+    <section id="projects" class="wrap">
+      <h2 class="giant">Featured work<sup>©</sup></h2>
+      <div class="works">
+        <a class="work" href="https://deen.pk">
+          <div class="shot"><img src="img/deen.jpg" alt="deen.pk homepage" loading="lazy" width="1440" height="900"></div>
+          <div class="work-meta">
+            <h3>deen.pk</h3>
+            <span>/Next.js · React · TypeScript</span>
+          </div>
+          <p>Namaz timings, Quran Kareem, Sehri and Iftar timings, and Qibla direction for Muslims worldwide.</p>
+        </a>
+        <a class="work" href="https://teky.pk">
+          <div class="shot"><img src="img/teky.jpg" alt="teky.pk homepage" loading="lazy" width="1440" height="900"></div>
+          <div class="work-meta">
+            <h3>teky.pk</h3>
+            <span>/Laravel · PHP · Tailwind CSS</span>
+          </div>
           <p>An online store for electronics, mobiles and accessories, shipping across Pakistan.</p>
-          <ul class="tags small"><li>Laravel</li><li>PHP</li><li>Tailwind CSS</li></ul>
-          <a class="mono link" href="https://teky.pk">Visit site →</a>
-        </article>
-        <article class="card project">
-          <h3><a href="https://stockcharted.com">stockcharted.com</a></h3>
+        </a>
+        <a class="work" href="https://stockcharted.com">
+          <div class="shot"><img src="img/stockcharted.jpg" alt="stockcharted.com homepage" loading="lazy" width="1440" height="900"></div>
+          <div class="work-meta">
+            <h3>stockcharted.com</h3>
+            <span>/Laravel · Inertia.js · Vue.js</span>
+          </div>
           <p>Real-time and historical charts for NASDAQ stocks, gold and silver, forex rates and cryptocurrencies.</p>
-          <ul class="tags small"><li>Laravel</li><li>Inertia.js</li><li>Vue.js</li></ul>
-          <a class="mono link" href="https://stockcharted.com">Visit site →</a>
-        </article>
+        </a>
+        <div class="work oss">
+          <div class="oss-box">
+            <h3>Open source</h3>
+            <ul id="repos" class="repo-list">
+              <li><a href="https://github.com/usmanahmed/docs">docs</a><span>Developer notes, published with GitHub Pages</span></li>
+              <li><a href="https://github.com/usmanahmed/github-pages-viewer">github-pages-viewer</a><span>Preview Markdown sites locally in PHP</span></li>
+              <li><a href="https://github.com/usmanahmed/snippets">snippets</a><span>Reusable WordPress snippets</span></li>
+            </ul>
+            <a class="pill" href="https://github.com/usmanahmed?tab=repositories">All repositories</a>
+          </div>
+        </div>
       </div>
-
-      <h3 class="sub">Open source</h3>
-      <p class="muted">Public repositories, loaded live from GitHub.</p>
-      <div id="repos" class="projects">
-        <article class="card project">
-          <h3><a href="https://github.com/usmanahmed/docs">docs</a></h3>
-          <p>My developer notes on servers, HTML, CSS, JavaScript, React, PHP, WordPress and Shopify, published as a site with GitHub Pages.</p>
-          <ul class="tags small"><li>PHP</li><li>WordPress</li><li>Shopify</li></ul>
-          <a class="mono link" href="https://usmanahmed.github.io/docs/">Live site →</a>
-        </article>
-        <article class="card project">
-          <h3><a href="https://github.com/usmanahmed/github-pages-viewer">github-pages-viewer</a></h3>
-          <p>A lightweight PHP app for browsing and rendering Markdown content locally, the way it will look on GitHub Pages.</p>
-          <ul class="tags small"><li>PHP</li></ul>
-        </article>
-        <article class="card project">
-          <h3><a href="https://github.com/usmanahmed/yaml-mk-cms">yaml-mk-cms</a></h3>
-          <p>A flat-file CMS that uses YAML and Markdown in place of a database.</p>
-          <ul class="tags small"><li>YAML</li><li>Markdown</li></ul>
-        </article>
-        <article class="card project">
-          <h3><a href="https://github.com/usmanahmed/snippets">snippets</a></h3>
-          <p>Reusable code snippets I collect, starting with WordPress theme development.</p>
-          <ul class="tags small"><li>WordPress</li></ul>
-        </article>
-      </div>
-      <p class="more"><a class="btn" href="https://github.com/usmanahmed?tab=repositories">All repositories on GitHub →</a></p>
     </section>
 
-    <section id="contact" class="wrap section contact">
-      <h2>Get in touch</h2>
-      <p class="lead">Have a project in mind, or need help with a WordPress, Shopify, or Laravel site? Email me and I'll reply.</p>
-      <a class="btn primary big" href="mailto:usmandvlpr@gmail.com">usmandvlpr@gmail.com</a>
-      <div class="socials">
-        <a href="tel:+923332353106">+92 333 2353106</a>
-        <a href="https://wa.me/923332353106">WhatsApp</a>
-        <a href="https://github.com/usmanahmed">GitHub</a>
+    <section id="contact" class="wrap contact">
+      <h2 class="big">Get in touch with me</h2>
+      <p class="muted">Need help with a WordPress, Shopify or Laravel site, or building something new? Email, call or message me on WhatsApp.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:usmandvlpr@gmail.com"><span>Email</span>usmandvlpr@gmail.com</a>
+        <a class="contact-card" href="tel:+923332353106"><span>Phone</span>+92 333 2353106</a>
+        <a class="contact-card" href="https://wa.me/923332353106"><span>WhatsApp</span>Message me →</a>
       </div>
     </section>
   </main>
 
-  <footer class="wrap footer mono">
-    © <span id="year">2026</span> Usman Ahmed · Hosted on GitHub Pages
+  <footer class="footer grid-bg">
+    <h2 class="giant">Warm thanks!</h2>
+    <p class="footer-line">Thanks for stopping by.</p>
+    <div class="footer-actions">
+      <a class="icon-btn ring" href="https://github.com/usmanahmed" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.900-1.500-3.900-1.500-.5-1.300-1.300-1.700-1.300-1.700-1-.7.1-.7.1-.7 1.200.1 1.800 1.200 1.800 1.200 1 1.800 2.800 1.300 3.500 1 .1-.8.4-1.300.7-1.600-2.600-.3-5.300-1.300-5.300-5.700 0-1.300.5-2.300 1.200-3.100-.1-.3-.5-1.500.1-3.100 0 0 1-.3 3.200 1.200a11 11 0 0 1 5.800 0c2.200-1.500 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.900 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.300c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+      </a>
+      <a class="icon-btn ring" href="https://wa.me/923332353106" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.600.7.6-.1 1.700-.7 2-1.400.2-.7.2-1.300.2-1.400-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      </a>
+      <a class="pill dark" href="mailto:usmandvlpr@gmail.com">Get in touch</a>
+    </div>
+    <p class="copy">© <span id="year">2026</span> Usman Ahmed. Karachi, Pakistan.</p>
   </footer>
+
+  <a href="#top" class="to-top" aria-label="Back to top">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 15l6-6 6 6"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>

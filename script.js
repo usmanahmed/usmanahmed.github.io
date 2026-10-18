@@ -15,33 +15,22 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
 
-// Load public repos live from GitHub; keep the static cards if the request fails.
+// Load public repos live from GitHub; keep the static list if the request fails.
 (async function () {
   const USER = 'usmanahmed';
   const SKIP = [USER + '.github.io'];
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  // Fallback descriptions for repos that have none on GitHub
+  const list = document.getElementById('repos');
+  // Static blurbs for repos that have no description on GitHub
   const blurbs = {};
-  document.querySelectorAll('#repos .project').forEach(card => {
-    blurbs[card.querySelector('h3').textContent.trim()] = card.outerHTML;
-  });
+  list.querySelectorAll('li').forEach(li => { blurbs[li.querySelector('a').textContent.trim()] = li.querySelector('span').textContent; });
 
   try {
     const res = await fetch(`https://api.github.com/users/${USER}/repos?sort=updated&per_page=100`);
     if (!res.ok) return;
     const repos = (await res.json()).filter(r => !r.fork && !r.archived && !SKIP.includes(r.name));
     if (!repos.length) return;
-
-    document.getElementById('repos').innerHTML = repos.map(r => {
-      if (!r.description && blurbs[r.name]) return blurbs[r.name];
-      const tags = [r.language, ...(r.topics || [])].filter(Boolean).slice(0, 4);
-      return `
-        <article class="card project">
-          <h3><a href="${esc(r.html_url)}">${esc(r.name)}</a></h3>
-          <p>${esc(r.description || 'No description yet.')}</p>
-          ${tags.length ? `<ul class="tags small">${tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
-          ${r.homepage ? `<a class="mono link" href="${esc(r.homepage)}">Live site →</a>` : ''}
-        </article>`;
-    }).join('');
+    list.innerHTML = repos.slice(0, 5).map(r => `
+      <li><a href="${esc(r.html_url)}">${esc(r.name)}</a><span>${esc(r.description || blurbs[r.name] || r.language || 'Public repository')}</span></li>`).join('');
   } catch (e) { /* keep static fallback */ }
 })();
