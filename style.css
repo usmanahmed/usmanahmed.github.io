@@ -109,3 +109,4 @@ h3 { margin: 0 0 12px; font-size: 17px; }
   .hero { padding-top: 56px; }
   .about-grid { grid-template-columns: 1fr; gap: 24px; }
 }
+.sub { margin: 48px 0 4px; font-size: 20px; }
