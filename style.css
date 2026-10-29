@@ -67,7 +67,7 @@ h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.03em; }
 /* Hero */
 .hero { padding-top: 96px; padding-bottom: 120px; }
 .hero-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; }
-.avatar { width: 160px; height: 125px; object-fit: cover; border-radius: 20px; background: var(--soft); }
+.avatar { width: 128px; height: 128px; object-fit: cover; border-radius: 50%; background: var(--soft); }
 .badge { position: relative; width: 124px; height: 124px; color: var(--muted); }
 .badge svg { width: 100%; height: 100%; animation: spin 18s linear infinite; }
 .badge text { font-size: 8.6px; letter-spacing: 0; fill: currentColor; font-weight: 500; }
