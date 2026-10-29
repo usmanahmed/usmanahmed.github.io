@@ -31,6 +31,6 @@
     const repos = (await res.json()).filter(r => !r.fork && !r.archived && !SKIP.includes(r.name));
     if (!repos.length) return;
     list.innerHTML = repos.slice(0, 5).map(r => `
-      <li><a href="${esc(r.html_url)}">${esc(r.name)}</a><span>${esc(r.description || blurbs[r.name] || r.language || 'Public repository')}</span></li>`).join('');
+      <li><a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.name)}</a><span>${esc(r.description || blurbs[r.name] || r.language || 'Public repository')}</span></li>`).join('');
   } catch (e) { /* keep static fallback */ }
 })();
