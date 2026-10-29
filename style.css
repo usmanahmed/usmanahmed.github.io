@@ -104,6 +104,8 @@ h1 { font-size: clamp(34px, 4.6vw, 64px); line-height: 1.2; }
 .work-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 28px; }
 .work-meta h3 { font-size: 26px; }
 .work-meta span { font-size: 15px; font-weight: 500; text-align: right; }
+.inline-link { text-decoration: underline; text-underline-offset: 3px; }
+.inline-link:hover { text-decoration-thickness: 2px; }
 .work p { margin: 8px 0 0; color: var(--muted); max-width: 520px; }
 
 .oss-box {
